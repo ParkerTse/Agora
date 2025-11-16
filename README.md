@@ -42,7 +42,7 @@ Listing Fees: From landlords/brokers for premium/featured listings on the commer
 Referral Fees: (Potential future) From brokers for successful lease agreements facilitated by your platform.
 
 Frameworks and Languages
-Frontend: TypeScript with React and Node.js
+Frontend: TypeScript with React and Next.js
 Backend: Java (SpringBoot)
 Database: postgreSQL
 ML: Python
