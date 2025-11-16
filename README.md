@@ -2,7 +2,7 @@
 this is an application that allows users to vote on what they want in their neighborhood
 
 
-Part 1: The user experience
+Part 1: The user experience \n
 Interactive Map (Similar to RedFin and Google Maps): Vacant/Available Commercial Plots Highlighted - show properties available for lease/sale
 User "Wish" Pin Drop: Users can pinpoint any location (vacant plot or just a general area - drop a pin and set a radius) and propose a business type (e.g., "Pho Restaurant").
 Other users can upvote / downvote the store idea.
