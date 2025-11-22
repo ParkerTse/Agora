@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WinterProject
 
-## Getting Started
+this is an application that allows users to vote on what they want in their neighborhood
 
-First, run the development server:
+Part 1: The user experience
+Interactive Map (Similar to RedFin and Google Maps): Vacant/Available Commercial Plots Highlighted - show properties available for lease/sale
+User "Wish" Pin Drop: Users can pinpoint any location (vacant plot or just a general area - drop a pin and set a radius) and propose a business type (e.g., "Pho Restaurant").
+Other users can upvote / downvote the store idea.
+(Not needed immediately)Community Feed: Show news and different events going on in the neighborhood
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Part 2: Commercial Property Supply
+Listing submissions: Landlords can post details about their available commercial properties (address, sq footage, photos, etc).
+Demand Insights for Landlords: The platform can show landlords nearby "wish list" heatmaps or specific "wishes" that match their property's characteristics, incentivizing them to list.
+(Not needed immediately)Listing Management: Tools for managing their properties and inquiries.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Part 3: Gathering Data
+Proprietary Data: Collect data from the users
+External Data: population, population growth, race percentage, city density, jobs, schools, etc.
+Data Processing: Transform raw data into suitable data for model
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Part 4: Data analysis / model and algortithms
+4.1
+Take all the data from part 3 and create a statistical / machine learning model to predict how well the store will do.
+Ex. Vietnamese restaurant = 79/100 > Mexican restaurant = 54/100.
+Most likely using XGBoost model - can transition to neural network or other models once we get more data
+outputs a success score
+4.2
+"Best" Location Algorithm: Recommends optimal location for specific kind of store, or for specific features.
+"Void Analysis" Algorithm: It then looks for patterns where the calculated "Success Score" is high, but the existing supply of that business type is low.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Part 5: Revenue
+5.1 B2B Analytics Platform:
+Success Score Reports: Detailed reports for entrepreneurs and developers, showing potential for various business types at specific sites.
+Property Matching: Match available listings (from Part 2) with high-demand areas and specific business wishes.
+Demand-Driven Listing Promotion: Offer landlords/brokers paid options to highlight their listings to entrepreneurs looking for businesses that match local "wishes."
+API Access & Consulting: For enterprise clients needing raw data integration or bespoke analysis.
 
-## Learn More
+5.2 Revenue Streams:
+Subscription Fees: For access to the full analytics platform (developers, chains).
+Per-Report Sales: For individual "Success Score" reports (entrepreneurs, small businesses).
+Listing Fees: From landlords/brokers for premium/featured listings on the commercial marketplace.
+Referral Fees: (Potential future) From brokers for successful lease agreements facilitated by your platform.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Frameworks and Languages
+Frontend: TypeScript with React and Next.js
+Backend: Java (SpringBoot)
+Database: postgreSQL
+ML: Python
+Cloud: Google or AWS
