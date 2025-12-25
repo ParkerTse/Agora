@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///home/parker/winterproject/src/app/business/page.tsx"],"sourcesContent":["export default function BusinessPage() {\n    return (\n        <div>\n            <h1>Business Page</h1>\n            <h2> Want to start a business and don't know where? Get data and insights here!</h2>\n        </div>\n    );\n}\n"],"names":[],"mappings":";;;;;;AAAe,SAAS;IACpB,qBACI,8OAAC;;0BACG,8OAAC;0BAAG;;;;;;0BACJ,8OAAC;0BAAG;;;;;;;;;;;;AAGhB"}}]
+}

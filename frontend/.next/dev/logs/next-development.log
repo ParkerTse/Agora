@@ -1,0 +1,182 @@
+[00:00:01.621] Server  LOG      ✓ Ready in 1111ms
+[00:00:04.720] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:05.848] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:00:07.838] Browser ERROR   {}
+[00:01:18.360] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:18.492] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:01:20.221] Browser LOG     Demand Data: {"Bakery":1}
+[00:01:26.271] Browser LOG     Saving Wish: Coffee Shop
+[00:01:27.703] Browser LOG     Demand Data: {"Bakery":1,"Coffee Shop":1}
+[00:01:35.629] Browser LOG     Saving Wish: Coffee Shop
+[00:01:37.682] Browser LOG     Demand Data: {"Bakery":1,"Coffee Shop":2}
+[00:03:03.198] Browser LOG     Saving Wish: Bakery
+[00:03:05.222] Browser LOG     Demand Data: {"Bakery":2,"Coffee Shop":2}
+[00:07:44.470] Server  LOG      ✓ Compiled in 80ms
+[00:07:55.614] Server  LOG      ✓ Compiled in 33ms
+[00:09:09.026] Server  LOG      ✓ Compiled in 42ms
+[00:09:12.574] Server  LOG      ✓ Compiled in 32ms
+[00:09:19.947] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:09:20.093] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:10:41.412] Server  LOG      ✓ Compiled in 93ms
+[00:10:41.885] Browser ERROR   ./frontend/src/app/sidebar.tsx:221:6
+Parsing ecmascript source code failed
+  219 |       </div>
+  220 |     </aside>
+> 221 |     </aside>
+      |      ^^^^^^^
+  222 |   );
+  223 | }
+
+Unterminated regexp literal
+
+Import traces:
+  Client Component Browser:
+    ./frontend/src/app/sidebar.tsx [Client Component Browser]
+    ./frontend/src/app/page.tsx [Client Component Browser]
+    ./frontend/src/app/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./frontend/src/app/sidebar.tsx [Client Component SSR]
+    ./frontend/src/app/page.tsx [Client Component SSR]
+    ./frontend/src/app/page.tsx [Server Component]
+[00:11:23.244] Server  LOG      ✓ Compiled in 34ms
+[00:11:28.807] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:11:28.962] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:11:54.648] Server  LOG      ✓ Compiled in 28ms
+[00:12:17.202] Server  LOG      ✓ Compiled in 32ms
+[00:12:38.494] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:12:38.621] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:14:02.789] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:02.918] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:14:34.557] Server  LOG      ✓ Compiled in 33ms
+[00:14:51.723] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:14:51.847] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:14:56.214] Browser LOG     Confirm button clicked!
+[00:14:57.770] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:08.743] Browser LOG     Upvoting: Coffee Shop
+[00:18:08.743] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:08.907] Browser LOG     Upvoting: Coffee Shop
+[00:18:08.907] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:09.059] Browser LOG     Upvoting: Coffee Shop
+[00:18:09.059] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:09.207] Browser LOG     Upvoting: Coffee Shop
+[00:18:09.208] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:09.340] Browser LOG     Upvoting: Coffee Shop
+[00:18:09.340] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:09.476] Browser LOG     Upvoting: Coffee Shop
+[00:18:09.476] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:09.740] Browser LOG     Upvoting: Coffee Shop
+[00:18:09.740] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:09.990] Browser LOG     Upvoting: Coffee Shop
+[00:18:09.990] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:10.123] Browser LOG     Upvoting: Coffee Shop
+[00:18:10.124] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:10.257] Browser LOG     Upvoting: Coffee Shop
+[00:18:10.257] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:13.193] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:13.346] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:18:15.391] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:17.639] Browser LOG     Upvoting: Coffee Shop
+[00:18:17.639] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:17.789] Browser LOG     Upvoting: Coffee Shop
+[00:18:17.789] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:17.938] Browser LOG     Upvoting: Coffee Shop
+[00:18:17.938] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:18.071] Browser LOG     Upvoting: Coffee Shop
+[00:18:18.071] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:18.189] Browser LOG     Upvoting: Coffee Shop
+[00:18:18.189] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:19.353] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:19.473] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:18:21.305] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:24.719] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:18:55.966] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:18:56.088] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:18:57.477] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:40:48.293] Browser LOG     Upvoting: Bakery
+[00:40:48.459] Browser LOG     Upvoting: Bakery
+[00:40:48.459] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:40:48.459] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:40:48.592] Browser LOG     Upvoting: Bakery
+[00:40:48.592] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:40:53.426] Browser LOG     Confirm button clicked!
+[00:40:55.676] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:40:57.208] Browser LOG     Upvoting: Bakery
+[00:40:57.208] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:40:57.374] Browser LOG     Upvoting: Bakery
+[00:40:57.374] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:40:57.508] Browser LOG     Upvoting: Bakery
+[00:40:57.508] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:40:57.782] Browser LOG     Upvoting: Bakery
+[00:40:57.782] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:40:57.782] Browser LOG     Upvoting: Bakery
+[00:40:57.782] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:40:57.926] Browser LOG     Upvoting: Bakery
+[00:40:57.926] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:41:26.028] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:41:26.186] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:41:28.383] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:54:06.055] Server  LOG      ✓ Compiled in 40ms
+[00:54:12.462] Browser LOG     Upvoting: Bakery
+[00:54:12.679] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:54:15.448] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:54:15.762] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[00:54:17.178] Browser LOG     Property Clicked: 40.7127 -74.0134
+[00:57:13.404] Browser LOG     Confirm button clicked!
+[01:25:01.537] Server  LOG      ✓ Compiled in 454ms
+[01:25:02.268] Browser LOG     Topbar module loaded
+[01:25:02.268] Browser LOG     Topbar module unloaded
+[01:25:02.268] Browser LOG     Topbar module loaded
+[01:25:14.432] Server  LOG      ✓ Compiled in 23ms
+[01:25:15.004] Browser LOG     Topbar module unloaded
+[01:25:15.004] Browser LOG     Topbar module loaded
+[01:25:15.004] Browser LOG     Topbar module unloaded
+[01:25:15.004] Browser LOG     Topbar module loaded
+[01:25:31.918] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:25:33.118] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:25:33.276] Browser LOG     Topbar module loaded
+[01:25:33.276] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[01:27:34.402] Server  LOG      ✓ Compiled in 33ms
+[01:27:38.258] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:27:38.383] Browser LOG     Topbar module loaded
+[01:27:38.383] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[01:27:46.687] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:27:46.816] Browser LOG     Topbar module loaded
+[01:27:46.816] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[01:28:23.904] Server  LOG      ✓ Compiled in 24ms
+[01:29:07.758] Server  LOG      ✓ Compiled in 22ms
+[01:30:21.873] Server  LOG      ✓ Compiled in 17ms
+[01:31:42.662] Server  LOG      ✓ Compiled in 67ms
+[01:31:47.617] Browser LOG     Topbar module unloaded
+[01:32:14.626] Browser LOG     Topbar module loaded
+[01:32:14.626] Browser LOG     Topbar module unloaded
+[01:32:14.626] Browser LOG     Topbar module loaded
+[01:32:16.307] Browser LOG     Topbar module unloaded
+[01:32:17.567] Browser LOG     Topbar module loaded
+[01:32:17.567] Browser LOG     Topbar module unloaded
+[01:32:17.567] Browser LOG     Topbar module loaded
+[01:36:55.915] Browser LOG     Topbar module unloaded
+[01:37:04.110] Browser ERROR   {}
+[01:49:13.836] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:49:22.907] Browser LOG     Topbar module loaded
+[01:49:22.907] Browser LOG     Topbar module unloaded
+[01:49:22.907] Browser LOG     Topbar module loaded
+[01:49:22.907] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[01:49:22.907] Browser WARN    Element with name "gmp-internal-loading-text" already defined.
+[01:49:22.907] Browser WARN    Element with name "gmp-internal-request-error-text" already defined.
+[01:49:22.907] Browser WARN    Element with name "gmp-internal-back-button" already defined.
+[01:49:22.907] Browser WARN    Element with name "gmp-internal-dialog" already defined.
+[01:49:22.907] Browser WARN    Element with name "gmp-internal-disclosure" already defined.
+[01:49:22.907] Browser WARN    Element with name "gmp-internal-disclosure-section" already defined.
+[01:49:22.907] Browser WARN    Element with name "gmp-internal-attribution" already defined.
+[01:49:22.907] Browser WARN    Element with name "gmp-internal-element-support-verification" already defined.
+[01:49:22.907] Browser ERROR   You have included the Google Maps JavaScript API multiple times on this page. This may cause unexpected errors.
+[01:49:22.907] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
+[01:49:22.908] Browser WARN    Element with name "gmp-pin" already defined.
+[01:49:22.908] Browser WARN    Element with name "gmp-internal-use-am" already defined.
+[01:49:22.908] Browser WARN    Element with name "gmp-map" already defined.
+[01:49:22.908] Browser WARN    Element with name "gmp-advanced-marker" already defined.
+[01:49:27.690] Browser LOG     Property Clicked: 40.7484 -73.9857
+[01:49:56.256] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[01:49:56.381] Browser LOG     Topbar module loaded
+[01:49:56.381] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
