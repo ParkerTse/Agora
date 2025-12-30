@@ -48,70 +48,43 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                         lineNumber: 48,
                         columnNumber: 9
                     }, this),
-                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("select", {
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                        type: "text",
                         value: category,
                         onChange: (e)=>onCategoryChange(e.target.value),
-                        className: "w-full p-3 border border-gray-200 rounded-xl bg-gray-50 text-gray-800 focus:ring-2 focus:ring-blue-500 outline-none transition-all",
-                        children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                value: "Coffee Shop",
-                                children: "☕ Coffee Shop"
-                            }, void 0, false, {
-                                fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 54,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                value: "Gym",
-                                children: "💪 Gym / Fitness"
-                            }, void 0, false, {
-                                fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 55,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                value: "Bakery",
-                                children: "🥐 Bakery"
-                            }, void 0, false, {
-                                fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 56,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                value: "Grocery",
-                                children: "🥦 Grocery Store"
-                            }, void 0, false, {
-                                fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 57,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                value: "Daycare",
-                                children: "👶 Daycare"
-                            }, void 0, false, {
-                                fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 58,
-                                columnNumber: 13
-                            }, this),
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                value: "Coworking",
-                                children: "💻 Coworking Space"
-                            }, void 0, false, {
-                                fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 59,
-                                columnNumber: 13
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        placeholder: "Type anything (e.g. Jazz Club)...",
+                        className: "w-full p-3 border border-gray-200 rounded-xl bg-gray-50 text-gray-800 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
+                    }, void 0, false, {
                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                        lineNumber: 49,
+                        lineNumber: 51,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "flex flex-wrap gap-2 mt-2",
+                        children: [
+                            '☕ Coffee Shop',
+                            '💪 Gym',
+                            '🥦 Grocery'
+                        ].map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                type: "button",
+                                onClick: ()=>onCategoryChange(item),
+                                className: "text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-3 py-1 rounded-full transition-colors",
+                                children: item
+                            }, item, false, {
+                                fileName: "[project]/frontend/src/app/sidebar.tsx",
+                                lineNumber: 62,
+                                columnNumber: 17
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/frontend/src/app/sidebar.tsx",
+                        lineNumber: 60,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/frontend/src/app/sidebar.tsx",
                 lineNumber: 47,
-                columnNumber: 7
+                columnNumber: 4
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "flex flex-col space-y-4",
@@ -124,7 +97,7 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                 children: "How far would you travel?"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 66,
+                                lineNumber: 77,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -135,13 +108,13 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 67,
+                                lineNumber: 78,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                        lineNumber: 65,
+                        lineNumber: 76,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -154,7 +127,7 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                         className: "w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                        lineNumber: 71,
+                        lineNumber: 82,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -164,33 +137,33 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                 children: "Walking (0.5mi)"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 81,
+                                lineNumber: 92,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                 children: "Driving (5mi)"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 82,
+                                lineNumber: 93,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                        lineNumber: 80,
+                        lineNumber: 91,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                lineNumber: 64,
+                lineNumber: 75,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {
                 className: "border-gray-100"
             }, void 0, false, {
                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                lineNumber: 86,
+                lineNumber: 97,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -203,7 +176,7 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                         children: isPinMode ? 'Click on Map...' : '📍 Drop Pin'
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                        lineNumber: 91,
+                        lineNumber: 102,
                         columnNumber: 11
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: onConfirmClick,
@@ -213,14 +186,14 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                 children: "✅"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 105,
+                                lineNumber: 116,
                                 columnNumber: 13
                             }, this),
                             " Confirm Wish"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                        lineNumber: 101,
+                        lineNumber: 112,
                         columnNumber: 11
                     }, this),
                     hasActivePin && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -229,13 +202,13 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                         children: "Cancel"
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                        lineNumber: 110,
+                        lineNumber: 121,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                lineNumber: 89,
+                lineNumber: 100,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -251,7 +224,7 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                     children: "Local Demand"
                                 }, void 0, false, {
                                     fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                    lineNumber: 124,
+                                    lineNumber: 135,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -259,13 +232,13 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                     children: "Live Data"
                                 }, void 0, false, {
                                     fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                    lineNumber: 127,
+                                    lineNumber: 138,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/frontend/src/app/sidebar.tsx",
-                            lineNumber: 123,
+                            lineNumber: 134,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -282,7 +255,7 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                                         children: cat
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                                        lineNumber: 140,
+                                                        lineNumber: 151,
                                                         columnNumber: 25
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -295,13 +268,13 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                                        lineNumber: 141,
+                                                        lineNumber: 152,
                                                         columnNumber: 25
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                                lineNumber: 139,
+                                                lineNumber: 150,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -313,18 +286,18 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                                     children: "👍 +1"
                                                 }, void 0, false, {
                                                     fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                                    lineNumber: 152,
+                                                    lineNumber: 163,
                                                     columnNumber: 25
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                                lineNumber: 147,
+                                                lineNumber: 158,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, cat, true, {
                                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                        lineNumber: 136,
+                                        lineNumber: 147,
                                         columnNumber: 19
                                     }, this)),
                                 Object.keys(demandSummary).length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -332,19 +305,19 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                     children: "No wishes found here yet."
                                 }, void 0, false, {
                                     fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                    lineNumber: 159,
+                                    lineNumber: 170,
                                     columnNumber: 17
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/frontend/src/app/sidebar.tsx",
-                            lineNumber: 132,
+                            lineNumber: 143,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/frontend/src/app/sidebar.tsx",
-                    lineNumber: 122,
+                    lineNumber: 133,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "flex flex-col items-center justify-center flex-1 text-center text-gray-400 border-2 border-dashed border-gray-100 rounded-xl px-4",
@@ -353,17 +326,17 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                         children: isConfirmMode ? "Drag pin to exact spot." : "Click a building to upvote wishes."
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                        lineNumber: 165,
+                        lineNumber: 176,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/frontend/src/app/sidebar.tsx",
-                    lineNumber: 164,
+                    lineNumber: 175,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                lineNumber: 120,
+                lineNumber: 131,
                 columnNumber: 7
             }, this)
         ]
@@ -395,8 +368,7 @@ var _s = __turbopack_context__.k.signature();
 'use client';
 ;
 const GOOGLE_MAPS_API_KEY = ("TURBOPACK compile-time value", "AIzaSyCmyv_tZANRj5ME2hxpW2Rfwn3Munnl_nU") || '';
-function GoogleMapsComponent({ isPinMode, setPinMode, searchRadius, hasActivePin, setHasActivePin, isConfirmMode, setIsConfirmMode, onPinPositionChange, properties, onPropertyClick// <--- Destructure new prop
- }) {
+function GoogleMapsComponent({ isPinMode, setPinMode, searchRadius, hasActivePin, setHasActivePin, isConfirmMode, setIsConfirmMode, onPinPositionChange, properties, onPropertyClick, onMapClick }) {
     _s();
     const mapRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const mapInstanceRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
@@ -404,6 +376,7 @@ function GoogleMapsComponent({ isPinMode, setPinMode, searchRadius, hasActivePin
     const currentCircleRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     const propertyMarkersRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])([]);
     const [isLoaded, setIsLoaded] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    // 1. Load Script
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "GoogleMapsComponent.useEffect": ()=>{
             if (window.google?.maps) {
@@ -419,6 +392,7 @@ function GoogleMapsComponent({ isPinMode, setPinMode, searchRadius, hasActivePin
             document.head.appendChild(script);
         }
     }["GoogleMapsComponent.useEffect"], []);
+    // 2. Initialize Map
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "GoogleMapsComponent.useEffect": ()=>{
             if (!isLoaded || !mapRef.current || mapInstanceRef.current) return;
@@ -436,7 +410,7 @@ function GoogleMapsComponent({ isPinMode, setPinMode, searchRadius, hasActivePin
     }["GoogleMapsComponent.useEffect"], [
         isLoaded
     ]);
-    // --- RENDER PROPERTIES (Green Tags) ---
+    // 3. Render Properties (Green Tags)
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "GoogleMapsComponent.useEffect": ()=>{
             if (!mapInstanceRef.current || !window.google) return;
@@ -448,7 +422,6 @@ function GoogleMapsComponent({ isPinMode, setPinMode, searchRadius, hasActivePin
             properties.forEach({
                 "GoogleMapsComponent.useEffect": async (prop)=>{
                     const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-                    // Create the Green Tag
                     const tag = document.createElement('div');
                     tag.className = 'bg-green-600 text-white px-2 py-1 rounded shadow-md text-xs font-bold border border-white transform hover:scale-110 transition-transform cursor-pointer';
                     tag.innerText = `$${(prop.price / 1000).toFixed(0)}k`;
@@ -461,15 +434,11 @@ function GoogleMapsComponent({ isPinMode, setPinMode, searchRadius, hasActivePin
                         content: tag,
                         title: prop.address
                     });
-                    // --- NEW CLICK LISTENER ---
                     marker.addListener("click", {
                         "GoogleMapsComponent.useEffect": ()=>{
-                            // Instead of opening a popup, we tell the Parent Component (Home)
-                            // that this property was clicked.
                             if (onPropertyClick) {
                                 onPropertyClick(prop.latitude, prop.longitude);
                             }
-                            // Optional: Center map on click smoothly
                             mapInstanceRef.current?.panTo({
                                 lat: prop.latitude,
                                 lng: prop.longitude
@@ -484,8 +453,8 @@ function GoogleMapsComponent({ isPinMode, setPinMode, searchRadius, hasActivePin
         properties,
         isLoaded,
         onPropertyClick
-    ]); // Re-run if properties or handler changes
-    // --- PINNING LOGIC (Standard) ---
+    ]);
+    // 4. Update Circle Radius
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "GoogleMapsComponent.useEffect": ()=>{
             if (currentCircleRef.current) {
@@ -496,6 +465,7 @@ function GoogleMapsComponent({ isPinMode, setPinMode, searchRadius, hasActivePin
     }["GoogleMapsComponent.useEffect"], [
         searchRadius
     ]);
+    // 5. Clear Pin if Cancelled
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "GoogleMapsComponent.useEffect": ()=>{
             if (!hasActivePin) {
@@ -512,6 +482,7 @@ function GoogleMapsComponent({ isPinMode, setPinMode, searchRadius, hasActivePin
     }["GoogleMapsComponent.useEffect"], [
         hasActivePin
     ]);
+    // 6. Toggle Draggable
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "GoogleMapsComponent.useEffect": ()=>{
             if (currentMarkerRef.current) {
@@ -521,6 +492,7 @@ function GoogleMapsComponent({ isPinMode, setPinMode, searchRadius, hasActivePin
     }["GoogleMapsComponent.useEffect"], [
         isConfirmMode
     ]);
+    // 7. PIN MODE LOGIC (The "Wish" Pin)
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "GoogleMapsComponent.useEffect": ()=>{
             if (!mapInstanceRef.current || !isPinMode) return;
@@ -591,6 +563,41 @@ function GoogleMapsComponent({ isPinMode, setPinMode, searchRadius, hasActivePin
         setIsConfirmMode,
         onPinPositionChange
     ]);
+    // 8. GENERIC CLICK LISTENER (For Landlord Page) 
+    // <--- THIS IS NOW SEPARATE AND CORRECT --->
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "GoogleMapsComponent.useEffect": ()=>{
+            if (!mapInstanceRef.current || isPinMode) return;
+            const map = mapInstanceRef.current;
+            const listener = map.addListener('click', {
+                "GoogleMapsComponent.useEffect.listener": (e)=>{
+                    if (onMapClick && e.latLng) {
+                        onMapClick(e.latLng.lat(), e.latLng.lng());
+                        // Visual Marker for Landlord Click
+                        new google.maps.Marker({
+                            position: e.latLng,
+                            map: map,
+                            icon: {
+                                path: google.maps.SymbolPath.CIRCLE,
+                                scale: 7,
+                                fillColor: "black",
+                                fillOpacity: 1,
+                                strokeWeight: 2,
+                                strokeColor: "white"
+                            }
+                        });
+                    }
+                }
+            }["GoogleMapsComponent.useEffect.listener"]);
+            return ({
+                "GoogleMapsComponent.useEffect": ()=>google.maps.event.removeListener(listener)
+            })["GoogleMapsComponent.useEffect"];
+        }
+    }["GoogleMapsComponent.useEffect"], [
+        isPinMode,
+        onMapClick,
+        isLoaded
+    ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
         className: "w-full h-full relative",
         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -598,16 +605,16 @@ function GoogleMapsComponent({ isPinMode, setPinMode, searchRadius, hasActivePin
             className: "w-full h-full"
         }, void 0, false, {
             fileName: "[project]/frontend/src/app/map.tsx",
-            lineNumber: 196,
+            lineNumber: 226,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/frontend/src/app/map.tsx",
-        lineNumber: 195,
+        lineNumber: 225,
         columnNumber: 5
     }, this);
 }
-_s(GoogleMapsComponent, "lAkHH1Lv0likI22xmdYp3rsxlDk=");
+_s(GoogleMapsComponent, "erMxSKMHjWsQNyyxABFS7mXzP8w=");
 _c = GoogleMapsComponent;
 var _c;
 __turbopack_context__.k.register(_c, "GoogleMapsComponent");
@@ -678,9 +685,9 @@ function Topbar() {
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                        href: "/commercial-space",
-                        style: linkStyle('/commercial-space'),
-                        children: "Commercial Space"
+                        href: "/retail-space",
+                        style: linkStyle('/retail-space'),
+                        children: "Retail Space"
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/app/topbar.tsx",
                         lineNumber: 35,

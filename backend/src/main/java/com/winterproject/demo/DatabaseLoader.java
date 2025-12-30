@@ -14,8 +14,8 @@ public class DatabaseLoader {
             if (propRepo.count() == 0) {
             
             // --- SUPPLY (The Buildings) ---
-                propRepo.save(new Property("Empire State", 3500000.0, 40.7484, -73.9857, "Midtown"));
-                propRepo.save(new Property("Freedom Tower", 4000000.0, 40.7127, -74.0134, "Downtown"));
+                propRepo.save(new Property("Empire State", 3500000.0, 40.7484, -73.9857, 1000, "Midtown"));
+                propRepo.save(new Property("Freedom Tower", 4000000.0, 40.7127, -74.0134, 1000, "Downtown"));
 
             // --- DEMAND (The Wishes) ---
                 wishRepo.save(new Wish("Gym", 40.7484, -73.9857, 500.0)); 
