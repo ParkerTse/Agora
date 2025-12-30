@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import Sidebar from './sidebar';
 import GoogleMapsComponent from './map';
 import Topbar from './topbar';
@@ -12,6 +12,7 @@ interface Property {
   latitude: number;
   longitude: number;
   description: string;
+  squareFeet: number;
 }
 
 export default function Home() {
@@ -24,43 +25,71 @@ export default function Home() {
   const [radius, setRadius] = useState<number>(1); 
   const [category, setCategory] = useState<string>("Coffee Shop"); 
 
-  // Location State
-  const [searchLocation, setSearchLocation] = useState<{lat: number, lng: number} | null>(null);
+  // --- LOCATION STATE ---
+  // 1. For the PIN (Making a wish) - Object {lat, lng}
+  const [pinLocation, setPinLocation] = useState<{lat: number, lng: number} | null>(null);
+  
+  // 2. For the SEARCH BAR (Teleporting) - String "Miami"
+  const [searchString, setSearchString] = useState<string>(""); 
+
+  // 3. For the SIDEBAR (Viewing demand)
   const [viewingLocation, setViewingLocation] = useState<{lat: number, lng: number} | null>(null);
   
   // Data State
   const [properties, setProperties] = useState<Property[]>([]); 
   const [demandSummary, setDemandSummary] = useState<Record<string, number> | null>(null);
 
-  useEffect(() => {
-    fetchProperties();
-  }, []);
+  // --- Fetch based on Viewport (Optimized with useCallback) ---
+  const fetchProperties = useCallback((bounds?: { minLat: number, maxLat: number, minLng: number, maxLng: number }) => {
+    let url = 'http://localhost:8080/api/properties';
 
-  const fetchProperties = () => {
-    fetch(`http://localhost:8080/search?lat=40.7484&lon=-73.9857&radius=20.0`)
+    if (bounds) {
+        const query = new URLSearchParams({
+            minLat: bounds.minLat.toString(),
+            maxLat: bounds.maxLat.toString(),
+            minLng: bounds.minLng.toString(),
+            maxLng: bounds.maxLng.toString(),
+        });
+        url += `?${query.toString()}`;
+    }
+
+    // console.log("Fetching from:", url); // Uncomment for debugging
+    fetch(url)
       .then(res => res.json())
       .then(data => setProperties(data))
       .catch(err => console.error("Error fetching properties:", err));
-  };
+  }, []); // Empty dependency array = function never changes identity (Fast!)
 
-  // --- HANDLER 1: CLICK A PROPERTY (View Demand) ---
-  const handlePropertyClick = (lat: number, lng: number) => {
-    console.log("Property Clicked:", lat, lng);
-    setViewingLocation({ lat, lng });
-    setHasActivePin(false);
-    setIsConfirmMode(false);
-    setIsPinMode(false);
-
+  // --- HELPER: Fetch Demand for ANY Location ---
+  const fetchDemand = (lat: number, lng: number) => {
     fetch(`http://localhost:8080/demand-summary?lat=${lat}&lon=${lng}`)
         .then(res => res.json())
         .then(data => setDemandSummary(data))
         .catch(err => console.error("Error fetching demand:", err));
   };
 
-  // --- HANDLER 2: UPVOTE (Add +1 to existing demand) ---
+  // --- HANDLER 1: CLICK A PROPERTY (Building) ---
+  const handlePropertyClick = (lat: number, lng: number) => {
+    setViewingLocation({ lat, lng });
+    setHasActivePin(false);
+    setIsConfirmMode(false);
+    setIsPinMode(false);
+    fetchDemand(lat, lng);
+  };
+
+  // --- HANDLER 2: CLICK MAP (Landlord Mode - Empty Space) ---
+  const handleMapClick = (lat: number, lng: number) => {
+    // Only allow clicking empty space if we aren't trying to drop a pin
+    if (isPinMode || isConfirmMode) return;
+
+    setViewingLocation({ lat, lng });
+    setHasActivePin(false);
+    fetchDemand(lat, lng);
+  };
+
+  // --- HANDLER 3: UPVOTE ---
   const handleUpvote = (categoryToUpvote: string) => {
     if (!viewingLocation) return;
-    console.log("Upvoting:", categoryToUpvote);
 
     fetch('http://localhost:8080/wish', {
         method: 'POST',
@@ -74,31 +103,28 @@ export default function Home() {
     })
     .then(res => res.json())
     .then(() => {
-        // Refresh the list immediately
+        // Refresh demand to see the new vote immediately
         handlePropertyClick(viewingLocation.lat, viewingLocation.lng);
     })
     .catch(err => alert("Error upvoting: " + err));
   };
 
-  // --- HANDLER 3: CONFIRM NEW WISH (The one that was broken) ---
+  // --- HANDLER 4: CONFIRM NEW WISH ---
   const handleConfirm = () => {
-    console.log("Confirm button clicked!"); // DEBUG LOG
-
-    if (!searchLocation) {
-        alert("Error: No location selected. Please drop a pin first.");
+    if (!pinLocation) {
+        alert("Error: No location selected.");
         return;
     }
 
     const radiusMeters = radius * 1609.34; 
 
-    // Save to Backend
     fetch('http://localhost:8080/wish', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
             category: category,
-            latitude: searchLocation.lat,
-            longitude: searchLocation.lng,
+            latitude: pinLocation.lat,
+            longitude: pinLocation.lng,
             radiusMeters: radiusMeters
         })
     })
@@ -107,22 +133,21 @@ export default function Home() {
         return res.json();
     })
     .then(() => {
-        // Success Logic
         setHasActivePin(false);
         setIsConfirmMode(false); 
-        setSearchLocation(null);
+        setPinLocation(null);
         setDemandSummary(null); 
         alert("Wish saved successfully!");
     })
     .catch(err => {
         console.error("Error saving wish:", err);
-        alert("Failed to save wish. Check your backend console.");
+        alert("Failed to save wish.");
     });
   };
 
   return (
     <div className="flex flex-col h-screen w-full">
-              <Topbar />
+      <Topbar />
       <div className="flex flex-row flex-1 overflow-hidden">
         <Sidebar 
           isPinMode={isPinMode}
@@ -137,16 +162,26 @@ export default function Home() {
           onDeletePin={() => {
             setHasActivePin(false);
             setIsConfirmMode(false);
-            setSearchLocation(null);
+            setPinLocation(null);
             setDemandSummary(null);
             setViewingLocation(null);
           }}
           demandSummary={demandSummary}
           onUpvote={handleUpvote}
+          onSearch={(query) => setSearchString(query)}
         />
 
         <main className="flex-1 h-full relative">
           <GoogleMapsComponent 
+            // 1. Viewport Filtering
+            properties={properties} 
+            onBoundsChange={fetchProperties}
+
+            // 2. Click Handling
+            onPropertyClick={handlePropertyClick}
+            onMapClick={handleMapClick} // <--- Added for Landlord Mode
+
+            // 3. Pin & UI State
             isPinMode={isPinMode}
             setPinMode={setIsPinMode}
             isConfirmMode={isConfirmMode}
@@ -154,9 +189,8 @@ export default function Home() {
             searchRadius={radius}
             hasActivePin={hasActivePin}
             setHasActivePin={setHasActivePin}
-            properties={properties} 
-            onPinPositionChange={(lat, lng) => setSearchLocation({ lat, lng })}
-            onPropertyClick={handlePropertyClick}
+            onPinPositionChange={(lat, lng) => setPinLocation({ lat, lng })}
+            searchLocation={searchString}
           />
         </main>
       </div>

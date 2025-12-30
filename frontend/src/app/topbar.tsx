@@ -32,7 +32,7 @@ export default function Topbar() {
     <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px', backgroundColor: '#f0f0f0' }}>
       <div>
         <Link href="/" style={linkStyle('/')}>Home</Link>
-        <Link href="/commercial-space" style={linkStyle('/commercial-space')}>Commercial Space</Link>
+        <Link href="/retail-space" style={linkStyle('/retail-space')}>Retail Space</Link>
         <Link href="/contact" style={linkStyle('/contact')}>Contact</Link>
       </div>
       <div>
