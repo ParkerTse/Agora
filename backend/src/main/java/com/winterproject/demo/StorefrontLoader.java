@@ -1,11 +1,15 @@
-package com.winterproject.demo; // <--- This MUST match your folder path
+package com.winterproject.demo;
+
 import com.opencsv.CSVReaderHeaderAware;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import java.io.File;
 import java.io.FileReader;
 import java.util.ArrayList;
+import java.util.HashSet; // <--- NEW IMPORT
 import java.util.List;
 import java.util.Map;
+import java.util.Set;     // <--- NEW IMPORT
 
 @Component
 public class StorefrontLoader implements CommandLineRunner {
@@ -17,57 +21,86 @@ public class StorefrontLoader implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws Exception {
-        if (propertyRepository.count() > 0) {
-            System.out.println("Data already exists. Skipping import.");
-            return;
-        }
-        // UPDATE THIS PATH to where your file actually is!
-        String filePath = "/home/parker/winterproject/backend/src/main/resources/Storefronts_Reported_Vacant_or_Not_20251228.csv";
-        
-        try (CSVReaderHeaderAware reader = new CSVReaderHeaderAware(new FileReader(filePath))) {
-            List<Property> batch = new ArrayList<>();
-            Map<String, String> values;
+    public void run(String... args) {
+        try {
+            System.out.println("--- StorefrontLoader Started ---");
 
-            while ((values = reader.readMap()) != null) {
-                Property p = new Property();
+            String filePath = "/home/parker/winterproject/backend/src/main/resources/Storefronts_Reported_Vacant_or_Not_20251228.csv";
+            File file = new File(filePath);
 
-                // 1. MAP THE COLUMNS
-                // CSV Header: "Property Street Address or Storefront Address"
-                p.setAddress(values.get("Property Street Address or Storefront Address"));
+            if (!file.exists()) {
+                System.out.println("⚠️ ERROR: File not found at: " + filePath);
+                return;
+            }
 
-                // CSV Header: "Primary Business Activity" -> Use as description
-                String activity = values.get("Primary Business Activity");
-                String neighborhood = values.get("NTA Neighborhood");
-                p.setDescription("Activity: " + activity + " | Area: " + neighborhood);
+            // --- 1. TRACK SEEN ADDRESSES ---
+            // This prevents adding the same address twice
+            Set<String> seenAddresses = new HashSet<>(); 
 
-                // 2. HANDLE MISSING DATA (Set defaults)
-                p.setPrice(0.0); // CSV doesn't have price
-                p.setSquareFeet(0); // CSV doesn't have size
+            try (CSVReaderHeaderAware reader = new CSVReaderHeaderAware(new FileReader(file))) {
+                List<Property> batch = new ArrayList<>();
+                Map<String, String> values;
 
-                // 3. PARSE LAT/LONG SAFEGUARD
-                try {
-                    p.setLatitude(Double.parseDouble(values.get("Latitude")));
-                    p.setLongitude(Double.parseDouble(values.get("Longitude")));
-                } catch (NumberFormatException e) {
-                    continue; // Skip rows with bad/missing coordinates
+                while ((values = reader.readMap()) != null) {
+                    
+                    // Filter: Only "YES"
+                    String vacantStatus = values.get("Vacant on 12/31");
+                    if (vacantStatus == null || !vacantStatus.equalsIgnoreCase("YES")) {
+                        continue; 
+                    }
+
+                    // --- 2. CHECK FOR DUPLICATES ---
+                    String address = values.get("Property Street Address or Storefront Address");
+                    if (address == null || seenAddresses.contains(address)) {
+                        continue; // Skip if we already added this address!
+                    }
+                    seenAddresses.add(address); // Mark as seen
+                    // -------------------------------
+
+                    Property p = new Property();
+                    p.setAddress(address);
+                    
+                    String activity = values.get("Primary Business Activity");
+                    String neighborhood = values.get("NTA Neighborhood");
+                    p.setDescription("Activity: " + (activity != null ? activity : "Unknown") + 
+                                     " | Area: " + (neighborhood != null ? neighborhood : "Unknown"));
+                    
+                    p.setPrice(0.0);
+                    p.setSquareFeet(0);
+
+                    // Coordinate Parsing
+                    String latStr = values.get("Latitude");
+                    String lonStr = values.get("Longitude");
+
+                    if (latStr != null && !latStr.isEmpty() && lonStr != null && !lonStr.isEmpty()) {
+                        try {
+                            p.setLatitude(Double.parseDouble(latStr));
+                            p.setLongitude(Double.parseDouble(lonStr));
+                        } catch (NumberFormatException e) {
+                            continue; 
+                        }
+                    } else {
+                        continue; 
+                    }
+
+                    batch.add(p);
+
+                    if (batch.size() >= 500) {
+                        propertyRepository.saveAll(batch);
+                        batch.clear();
+                        System.out.println("Saved batch...");
+                    }
                 }
 
-                batch.add(p);
-
-                // 4. BATCH SAVING (Crucial for speed)
-                if (batch.size() >= 500) {
+                if (!batch.isEmpty()) {
                     propertyRepository.saveAll(batch);
-                    batch.clear();
-                    System.out.println("Saved 500 rows...");
                 }
+                System.out.println("--- Import SUCCESS! ---");
             }
 
-            // Save any leftovers
-            if (!batch.isEmpty()) {
-                propertyRepository.saveAll(batch);
-            }
-            System.out.println("Import Complete!");
+        } catch (Exception e) {
+            System.err.println("IMPORT FAILED: " + e.getMessage());
+            e.printStackTrace();
         }
     }
 }

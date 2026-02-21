@@ -205,11 +205,11 @@ __turbopack_context__.s([
     ()=>Sidebar
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/frontend/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$app$2f$searchBar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/frontend/src/app/searchBar.tsx [app-client] (ecmascript)"); // <--- Make sure this path matches where you saved SearchBar.tsx
+var __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$app$2f$searchBar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/frontend/src/app/searchBar.tsx [app-client] (ecmascript)");
 'use client';
 ;
 ;
-function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, onDeletePin, isConfirmMode, onConfirmClick, category, onCategoryChange, demandSummary, onUpvote, onSearch }) {
+function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, onDeletePin, isConfirmMode, onConfirmClick, category, onCategoryChange, demandSummary, onUpvote, onSearch, selectedProperty }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
         className: "w-[350px] h-full bg-white border-r shadow-lg flex flex-col p-6 z-10",
         children: [
@@ -217,7 +217,7 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                 onSearch: onSearch
             }, void 0, false, {
                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                lineNumber: 47,
+                lineNumber: 59,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -228,7 +228,7 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                         children: "Make a Wish"
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                        lineNumber: 51,
+                        lineNumber: 63,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -236,13 +236,13 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                         children: "Tell landlords what this area needs."
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                        lineNumber: 52,
+                        lineNumber: 64,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                lineNumber: 50,
+                lineNumber: 62,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -256,7 +256,7 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                 children: "What is missing here?"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 60,
+                                lineNumber: 72,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -267,7 +267,7 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                 className: "w-full p-3 border border-gray-200 rounded-xl bg-gray-50 text-gray-800 focus:ring-2 focus:ring-blue-500 outline-none transition-all"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 63,
+                                lineNumber: 74,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -283,18 +283,18 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                         children: item
                                     }, item, false, {
                                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                        lineNumber: 74,
+                                        lineNumber: 84,
                                         columnNumber: 21
                                     }, this))
                             }, void 0, false, {
                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 72,
+                                lineNumber: 82,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                        lineNumber: 59,
+                        lineNumber: 71,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -308,7 +308,7 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                         children: "How far would you travel?"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                        lineNumber: 89,
+                                        lineNumber: 99,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -319,13 +319,13 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                        lineNumber: 90,
+                                        lineNumber: 100,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 88,
+                                lineNumber: 98,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -338,7 +338,7 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                 className: "w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 94,
+                                lineNumber: 104,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -348,33 +348,33 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                         children: "Walking (0.5mi)"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                        lineNumber: 104,
+                                        lineNumber: 114,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: "Driving (5mi)"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 115,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 103,
+                                lineNumber: 113,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                        lineNumber: 87,
+                        lineNumber: 97,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("hr", {
                         className: "border-gray-100"
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                        lineNumber: 109,
+                        lineNumber: 119,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -387,7 +387,7 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                 children: isPinMode ? 'Click on Map...' : '📍 Drop Pin'
                             }, void 0, false, {
                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 114,
+                                lineNumber: 124,
                                 columnNumber: 13
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: onConfirmClick,
@@ -397,14 +397,14 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                         children: "✅"
                                     }, void 0, false, {
                                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                        lineNumber: 128,
+                                        lineNumber: 138,
                                         columnNumber: 15
                                     }, this),
                                     " Confirm Wish"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 124,
+                                lineNumber: 134,
                                 columnNumber: 13
                             }, this),
                             hasActivePin && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -413,47 +413,82 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                 children: "Cancel"
                             }, void 0, false, {
                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 133,
+                                lineNumber: 143,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                        lineNumber: 112,
+                        lineNumber: 122,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "border-t pt-4",
-                        children: demandSummary ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        children: selectedProperty && demandSummary ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex flex-col animate-in fade-in slide-in-from-bottom-2 duration-300",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "flex justify-between items-center mb-3",
+                                    className: "flex justify-between items-start mb-3",
                                     children: [
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
-                                            className: "text-sm font-bold text-gray-700 uppercase tracking-wider",
-                                            children: "Local Demand"
-                                        }, void 0, false, {
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "flex flex-col",
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
+                                                    className: "text-sm font-bold text-gray-700 uppercase tracking-wider",
+                                                    children: "Neighborhood Wishes"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/frontend/src/app/sidebar.tsx",
+                                                    lineNumber: 161,
+                                                    columnNumber: 21
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    className: "text-[10px] text-gray-500 font-medium leading-tight mt-1",
+                                                    children: [
+                                                        "Within 5 min walk (400m) of: ",
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                            fileName: "[project]/frontend/src/app/sidebar.tsx",
+                                                            lineNumber: 165,
+                                                            columnNumber: 54
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                            className: "text-blue-600 font-semibold",
+                                                            children: [
+                                                                "@ ",
+                                                                selectedProperty.address
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/frontend/src/app/sidebar.tsx",
+                                                            lineNumber: 166,
+                                                            columnNumber: 25
+                                                        }, this)
+                                                    ]
+                                                }, void 0, true, {
+                                                    fileName: "[project]/frontend/src/app/sidebar.tsx",
+                                                    lineNumber: 164,
+                                                    columnNumber: 21
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                            lineNumber: 147,
+                                            lineNumber: 160,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                            className: "text-[10px] bg-gray-100 text-gray-500 px-2 py-1 rounded-full",
-                                            children: "Live Data"
+                                            className: "text-[10px] bg-green-100 text-green-700 px-2 py-1 rounded-full whitespace-nowrap ml-2",
+                                            children: "Live Area"
                                         }, void 0, false, {
                                             fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                            lineNumber: 150,
+                                            lineNumber: 169,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                    lineNumber: 146,
+                                    lineNumber: 159,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "space-y-3",
+                                    className: "space-y-3 max-h-[300px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-gray-200",
                                     children: [
                                         Object.entries(demandSummary).sort(([, a], [, b])=>b - a).map(([cat, count])=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 className: "flex justify-between items-center p-3 bg-blue-50 rounded-xl border border-blue-100 hover:border-blue-300 transition-colors group",
@@ -466,7 +501,7 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                                                 children: cat
                                                             }, void 0, false, {
                                                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                                                lineNumber: 161,
+                                                                lineNumber: 180,
                                                                 columnNumber: 27
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -474,92 +509,125 @@ function Sidebar({ isPinMode, onPinClick, radius, onRadiusChange, hasActivePin, 
                                                                 children: [
                                                                     count,
                                                                     " ",
-                                                                    count === 1 ? 'person wants' : 'people want',
-                                                                    " this"
+                                                                    count === 1 ? 'vote' : 'votes'
                                                                 ]
                                                             }, void 0, true, {
                                                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                                                lineNumber: 162,
+                                                                lineNumber: 181,
                                                                 columnNumber: 27
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                                        lineNumber: 160,
+                                                        lineNumber: 179,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                                         onClick: ()=>onUpvote(cat),
                                                         className: "bg-white text-blue-600 hover:bg-blue-600 hover:text-white border border-blue-200 p-2 rounded-full shadow-sm transition-all active:scale-95 flex items-center justify-center",
-                                                        title: "I want this too!",
+                                                        title: `Vote for ${cat} in this neighborhood`,
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                             className: "text-xs font-bold",
                                                             children: "👍 +1"
                                                         }, void 0, false, {
                                                             fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                                            lineNumber: 171,
+                                                            lineNumber: 190,
                                                             columnNumber: 27
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                                        lineNumber: 166,
+                                                        lineNumber: 185,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, cat, true, {
                                                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                                lineNumber: 159,
+                                                lineNumber: 178,
                                                 columnNumber: 21
                                             }, this)),
                                         Object.keys(demandSummary).length === 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "text-sm text-gray-400 text-center mt-4",
-                                            children: "No wishes found here yet."
-                                        }, void 0, false, {
+                                            children: [
+                                                "No wishes for this neighborhood yet. ",
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                    fileName: "[project]/frontend/src/app/sidebar.tsx",
+                                                    lineNumber: 197,
+                                                    columnNumber: 60
+                                                }, this),
+                                                " Be the first!"
+                                            ]
+                                        }, void 0, true, {
                                             fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                            lineNumber: 177,
+                                            lineNumber: 196,
                                             columnNumber: 19
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                    lineNumber: 155,
+                                    lineNumber: 174,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/frontend/src/app/sidebar.tsx",
-                            lineNumber: 145,
+                            lineNumber: 156,
                             columnNumber: 13
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex flex-col items-center justify-center text-center text-gray-400 border-2 border-dashed border-gray-100 rounded-xl px-4 py-8",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                className: "text-xs",
-                                children: isConfirmMode ? "Drag pin to exact spot." : "Click a building to upvote wishes."
-                            }, void 0, false, {
-                                fileName: "[project]/frontend/src/app/sidebar.tsx",
-                                lineNumber: 183,
-                                columnNumber: 15
-                            }, this)
-                        }, void 0, false, {
+                            className: "flex flex-col items-center justify-center text-center text-gray-400 border-2 border-dashed border-gray-100 rounded-xl px-4 py-8 bg-gray-50",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "text-2xl mb-2",
+                                    children: "👈"
+                                }, void 0, false, {
+                                    fileName: "[project]/frontend/src/app/sidebar.tsx",
+                                    lineNumber: 204,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-sm font-medium text-gray-600",
+                                    children: "Select a building on the map"
+                                }, void 0, false, {
+                                    fileName: "[project]/frontend/src/app/sidebar.tsx",
+                                    lineNumber: 205,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-xs mt-1",
+                                    children: [
+                                        "Click a pin to see what the neighborhood ",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                            fileName: "[project]/frontend/src/app/sidebar.tsx",
+                                            lineNumber: 209,
+                                            columnNumber: 58
+                                        }, this),
+                                        " wants within walking distance."
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/frontend/src/app/sidebar.tsx",
+                                    lineNumber: 208,
+                                    columnNumber: 15
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/frontend/src/app/sidebar.tsx",
-                            lineNumber: 182,
+                            lineNumber: 203,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/app/sidebar.tsx",
-                        lineNumber: 143,
+                        lineNumber: 153,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/frontend/src/app/sidebar.tsx",
-                lineNumber: 56,
+                lineNumber: 68,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/frontend/src/app/sidebar.tsx",
-        lineNumber: 44,
+        lineNumber: 56,
         columnNumber: 5
     }, this);
 }
@@ -1050,16 +1118,18 @@ function Home() {
     const [radius, setRadius] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(1);
     const [category, setCategory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("Coffee Shop");
     // --- LOCATION STATE ---
-    // 1. For the PIN (Making a wish) - Object {lat, lng}
+    // 1. For the PIN (Making a wish)
     const [pinLocation, setPinLocation] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    // 2. For the SEARCH BAR (Teleporting) - String "Miami"
+    // 2. For the SEARCH BAR
     const [searchString, setSearchString] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     // 3. For the SIDEBAR (Viewing demand)
     const [viewingLocation, setViewingLocation] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    // 4. SELECTED BUILDING (New!)
+    const [selectedProperty, setSelectedProperty] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     // Data State
     const [properties, setProperties] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [demandSummary, setDemandSummary] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
-    // --- Fetch based on Viewport (Optimized with useCallback) ---
+    // --- Fetch based on Viewport ---
     const fetchProperties = (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
         "Home.useCallback[fetchProperties]": (bounds)=>{
             let url = 'http://localhost:8080/api/properties';
@@ -1072,7 +1142,6 @@ function Home() {
                 });
                 url += `?${query.toString()}`;
             }
-            // console.log("Fetching from:", url); // Uncomment for debugging
             fetch(url).then({
                 "Home.useCallback[fetchProperties]": (res)=>res.json()
             }["Home.useCallback[fetchProperties]"]).then({
@@ -1081,13 +1150,18 @@ function Home() {
                 "Home.useCallback[fetchProperties]": (err)=>console.error("Error fetching properties:", err)
             }["Home.useCallback[fetchProperties]"]);
         }
-    }["Home.useCallback[fetchProperties]"], []); // Empty dependency array = function never changes identity (Fast!)
+    }["Home.useCallback[fetchProperties]"], []);
     // --- HELPER: Fetch Demand for ANY Location ---
     const fetchDemand = (lat, lng)=>{
         fetch(`http://localhost:8080/demand-summary?lat=${lat}&lon=${lng}`).then((res)=>res.json()).then((data)=>setDemandSummary(data)).catch((err)=>console.error("Error fetching demand:", err));
     };
     // --- HANDLER 1: CLICK A PROPERTY (Building) ---
     const handlePropertyClick = (lat, lng)=>{
+        // 1. Find the actual property object based on these coordinates
+        // This allows us to pass the Address/ID to the sidebar
+        const clickedProp = properties.find((p)=>// Use a tiny epsilon for float comparison safety, or strict equality if data is exact
+            Math.abs(p.latitude - lat) < 0.00001 && Math.abs(p.longitude - lng) < 0.00001) || null;
+        setSelectedProperty(clickedProp); // <--- Update the specific property state
         setViewingLocation({
             lat,
             lng
@@ -1097,10 +1171,11 @@ function Home() {
         setIsPinMode(false);
         fetchDemand(lat, lng);
     };
-    // --- HANDLER 2: CLICK MAP (Landlord Mode - Empty Space) ---
+    // --- HANDLER 2: CLICK MAP (Empty Space) ---
     const handleMapClick = (lat, lng)=>{
-        // Only allow clicking empty space if we aren't trying to drop a pin
         if (isPinMode || isConfirmMode) return;
+        // Deselect specific property because we clicked empty space
+        setSelectedProperty(null);
         setViewingLocation({
             lat,
             lng
@@ -1153,6 +1228,7 @@ function Home() {
             setIsConfirmMode(false);
             setPinLocation(null);
             setDemandSummary(null);
+            setSelectedProperty(null);
             alert("Wish saved successfully!");
         }).catch((err)=>{
             console.error("Error saving wish:", err);
@@ -1164,7 +1240,7 @@ function Home() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$src$2f$app$2f$topbar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/frontend/src/app/page.tsx",
-                lineNumber: 150,
+                lineNumber: 163,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1186,13 +1262,16 @@ function Home() {
                             setPinLocation(null);
                             setDemandSummary(null);
                             setViewingLocation(null);
+                            setSelectedProperty(null);
                         },
                         demandSummary: demandSummary,
                         onUpvote: handleUpvote,
-                        onSearch: (query)=>setSearchString(query)
+                        onSearch: (query)=>setSearchString(query),
+                        // 👇 THIS FIXES THE ERROR AND CONNECTS THE SIDEBAR LOGIC
+                        selectedProperty: selectedProperty
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/app/page.tsx",
-                        lineNumber: 152,
+                        lineNumber: 165,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$frontend$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -1219,28 +1298,28 @@ function Home() {
                             searchLocation: searchString
                         }, void 0, false, {
                             fileName: "[project]/frontend/src/app/page.tsx",
-                            lineNumber: 175,
+                            lineNumber: 192,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/frontend/src/app/page.tsx",
-                        lineNumber: 174,
+                        lineNumber: 191,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/frontend/src/app/page.tsx",
-                lineNumber: 151,
+                lineNumber: 164,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/frontend/src/app/page.tsx",
-        lineNumber: 149,
+        lineNumber: 162,
         columnNumber: 5
     }, this);
 }
-_s(Home, "4iIoCscDO+ZUCK+F0yY1gbkN3B4=");
+_s(Home, "xHwN+rrAxgmh7v6JWvndnYbgbrw=");
 _c = Home;
 var _c;
 __turbopack_context__.k.register(_c, "Home");
