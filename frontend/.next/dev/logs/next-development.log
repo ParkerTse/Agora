@@ -1,5 +1,0 @@
-[00:00:01.612] Server  LOG      ✓ Ready in 1237ms
-[00:00:07.674] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:07.830] Browser LOG     Topbar module loaded
-[00:00:08.064] Browser WARN    Google Maps JavaScript API has been loaded directly without loading=async. This can result in suboptimal performance. For best-practice loading patterns please see https://goo.gle/js-api-loading
-[00:00:08.540] Browser WARN    <gmp-advanced-marker>: Please use addEventListener('gmp-click', ...) instead of addEventListener('click', ...).
